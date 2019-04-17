@@ -183,10 +183,16 @@ namespace WindowsFormsApp1
                        u.b1 = returnBytes[6];
                        u.b2 = returnBytes[7];
                        u.b3 = returnBytes[8];
-                    
-                        string msg1 = Double.Parse(Convert.ToString(10 * Math.Log10(u.f))).ToString("F2");   //dBm
+
+                       Union voltage  = new Union();
+                       voltage.b0 = returnBytes[9];  //Tx_Buf[5  6  7  8 ]
+                       voltage.b1 = returnBytes[10];
+                       voltage.b2 = 0;
+                       voltage.b3 = 0;
+
+                       string msg1 = Double.Parse(Convert.ToString(10 * Math.Log10(u.f))).ToString("F2");   //dBm
                        richTextBox1_valnue.Text += msg1 + " dBm" + "\n";
-                       richTextBox2_valnue.Text += Convert.ToString(u.f) + " mW\n";       //mW;
+                       richTextBox2_valnue.Text += msg1 + " dBm     "  + Convert.ToString(u.f) + " mW    " + Convert.ToString(voltage.i) +"    " + returnBytes[12] + "\n";       //mW;
 
                    };
                    Invoke(action, i);
@@ -227,6 +233,16 @@ namespace WindowsFormsApp1
         {
             string FileName = DateTime.Now.ToString("yyyyMMddhhmmss") + ".txt";
             richTextBox1_valnue.SaveFile(FileName, RichTextBoxStreamType.PlainText);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //CoverdBm_textBox1        CovermW_textBox2
+            //  string msg1 = Double.Parse(Convert.ToString(10 * Math.Log10(u.f))).ToString("F2");   //dBm   -61.95 dBm     6.381912E-07 mW    45    6
+
+            CovermW_textBox2.Text = Convert.ToString(Math.Pow(10,(Convert.ToDouble( CoverdBm_textBox1.Text) )/10 )*(Math.Pow(10,-3) ) );   //dBm
+
+
         }
     }
 }
