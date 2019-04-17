@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="grandway.ico" />
+    <Content Include="Resources\WindowsforMsAPP_20190417135239.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
