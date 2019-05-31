@@ -202,14 +202,14 @@ namespace WindowsFormsApp1
         //    }
         }
 
-            //stop
+            //exit interface
             private void StopSend_Click(object sender, EventArgs e)
         {
     
             System.Environment.Exit(0);
         }
 
-
+        //save as
         SaveFileDialog saveFileDialog1 = new SaveFileDialog();
         private void DataSave_Click(object sender, EventArgs e)
         {
@@ -229,18 +229,20 @@ namespace WindowsFormsApp1
             }
         }
 
+        //save
         private void dBm_valnue_save_Click(object sender, EventArgs e)
         {
             string FileName = DateTime.Now.ToString("yyyyMMddhhmmss") + ".txt";
             richTextBox1_valnue.SaveFile(FileName, RichTextBoxStreamType.PlainText);
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        
+        //cover dBm to W
+        private void Btn_cover_Click(object sender, EventArgs e)
         {
             //CoverdBm_textBox1        CovermW_textBox2
             //  string msg1 = Double.Parse(Convert.ToString(10 * Math.Log10(u.f))).ToString("F2");   //dBm   -61.95 dBm     6.381912E-07 mW    45    6
 
-            CovermW_textBox2.Text = Convert.ToString(Math.Pow(10,(Convert.ToDouble( CoverdBm_textBox1.Text) )/10 )*(Math.Pow(10,-3) ) );   //dBm
+            CovermW_textBox2.Text = Convert.ToString(Math.Pow(10,(Convert.ToDouble( CoverdBm_textBox1.Text) )/10 )*(Math.Pow(10,-3) ) );   //dBm  >> W
 
 
         }

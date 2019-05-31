@@ -40,7 +40,7 @@
             this.dBm_valnue_save = new System.Windows.Forms.Button();
             this.CoverdBm_textBox1 = new System.Windows.Forms.TextBox();
             this.CovermW_textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_cover = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PortOpen
@@ -143,22 +143,22 @@
             this.CovermW_textBox2.TabIndex = 12;
             this.CovermW_textBox2.Text = "W";
             // 
-            // button1
+            // Btn_cover
             // 
-            this.button1.Location = new System.Drawing.Point(489, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Cover";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_cover.Location = new System.Drawing.Point(489, 285);
+            this.Btn_cover.Name = "Btn_cover";
+            this.Btn_cover.Size = new System.Drawing.Size(75, 23);
+            this.Btn_cover.TabIndex = 13;
+            this.Btn_cover.Text = "Cover";
+            this.Btn_cover.UseVisualStyleBackColor = true;
+            this.Btn_cover.Click += new System.EventHandler(this.Btn_cover_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 344);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_cover);
             this.Controls.Add(this.CovermW_textBox2);
             this.Controls.Add(this.CoverdBm_textBox1);
             this.Controls.Add(this.dBm_valnue_save);
@@ -193,7 +193,7 @@
         private System.Windows.Forms.Button dBm_valnue_save;
         private System.Windows.Forms.TextBox CoverdBm_textBox1;
         private System.Windows.Forms.TextBox CovermW_textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_cover;
     }
 }
 
