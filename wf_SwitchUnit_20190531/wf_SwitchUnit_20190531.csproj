@@ -88,5 +88,11 @@
   <ItemGroup>
     <None Include="Resources\grandway100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\dBm dBw W about.png" />
+    <Content Include="Resources\dBm dBw W chm.png" />
+    <Content Include="Resources\dBm dBw W mainform1.png" />
+    <Content Include="Resources\dBm dBw W mainform2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
